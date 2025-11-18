@@ -2,6 +2,7 @@
 require 'config.global'
 require 'config.lazy'
 require 'config.autocommands'
+require 'config.keymap'
 
 -- =============================
 -- Color Scheme 
@@ -26,12 +27,6 @@ vim.o.winborder = "rounded"
 vim.o.clipboard = "unnamedplus"
 
 
-vim.keymap.set('i', '<leader>jk', '<ESC>')
-vim.keymap.set('n', '<leader>w', ':write<CR>')
-vim.keymap.set('n', '<Tab>', '>>', { noremap = true, silent = true })
-vim.keymap.set('n', '<S-Tab>', '<<', { noremap = true, silent = true })
-vim.keymap.set('v', '<Tab>', '>gv') 
-vim.keymap.set('v', '<S-Tab>', '<gv')
 
 -- transparent background if needed
 vim.cmd [[

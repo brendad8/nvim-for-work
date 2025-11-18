@@ -8,14 +8,22 @@ return {
       current_only = true,
     },
   },
-
   {
-    "echasnovski/mini.pick",
-    version = "*",
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      local pick = require("mini.pick")
+      require("fzf-lua").setup({
 
-      pick.setup(
+      })
+    end,
+  },
+  -- {
+  --   "echasnovski/mini.pick",
+  --   version = "*",
+  --   config = function()
+  --     local pick = require("mini.pick")
+  --
+  --     pick.setup(
         -- {
         --   mappings = {
         --     move_down  = '<Down>',
@@ -23,18 +31,17 @@ return {
         --     move_up    = '<Up>',
         --   }
         -- }
-      )
-
-    -- Keymaps
-      vim.keymap.set("n", "<leader>ff", function()
-        pick.builtin.files()
-      end, { desc = "Pick files" })
-
-      vim.keymap.set("n", "<leader>fg", function()
-        pick.builtin.grep_live()
-      end, { desc = "Live grep" })
-    end,
-  },
+      -- )
+  --   -- Keymaps
+  --     vim.keymap.set("n", "<leader>ff", function()
+  --       pick.builtin.files()
+  --     end, { desc = "Pick files" })
+  --
+  --     vim.keymap.set("n", "<leader>fg", function()
+  --       pick.builtin.grep_live()
+  --     end, { desc = "Live grep" })
+  --   end,
+  -- },
 
   { -- filetree
     'nvim-tree/nvim-tree.lua',
