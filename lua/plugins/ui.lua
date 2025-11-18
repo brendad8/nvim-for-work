@@ -9,6 +9,34 @@ return {
     },
   },
   {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
+  {
+    'kiennt63/harpoon-files.nvim',
+    dependencies = {
+        { 'ThePrimeagen/harpoon' },
+    },
+    opts = {
+        max_length = 15,
+        icon = '',
+        show_icon = true,
+        show_index = true,
+        show_filename = true,
+        separator_left = ' ',
+        separator_right = ' ',
+        reverse_order = false,
+    }
+  },
+  {
+    "leath-dub/snipe.nvim",
+    keys = {
+      {"gb", function () require("snipe").open_buffer_menu() end, desc = "Open Snipe buffer menu"}
+    },
+    opts = {}
+  },
+  {
     "ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
