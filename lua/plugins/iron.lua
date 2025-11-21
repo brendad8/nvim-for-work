@@ -16,6 +16,10 @@ return {
           format = common.bracketed_paste_python,
           block_deviders = { "# %%", "#%%" },
           env = {PYTHON_BASIC_REPL = "1"} --this is needed for python3.13 and up.
+        },
+        r = {
+          command = { "R" },
+          block_deviders = { "# %%", "#%%" },
         }
       },
       -- set the file type of the newly created repl to ft
