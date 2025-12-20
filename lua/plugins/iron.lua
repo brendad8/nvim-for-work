@@ -73,16 +73,11 @@ return {
       highlight_timeout = 150,
     })
 
-    ------------------------------------------------------------------------------
-    -- OPTIONAL: Better REPL navigation
-    ------------------------------------------------------------------------------
-    vim.keymap.set("n", "<leader>rs", "<cmd>IronRepl<cr>", { desc = "Start REPL" })
-    -- vim.keymap.set("n", "<leader>rr", "<cmd>IronRestart<cr>", { desc = "Restart REPL" })
-    vim.keymap.set("n", "<leader>rf", "<cmd>IronFocus<cr>", { desc = "Focus REPL" })
     vim.keymap.set("n", "<leader>cb", function()
       local row = vim.api.nvim_win_get_cursor(0)[1]
       vim.api.nvim_buf_set_lines(0, row, row, false, { "#%%", "" })
       vim.api.nvim_win_set_cursor(0, { row + 1, 0 })
     end, { desc = "Insert cell delimiter (#%%)" })
+
   end,
 }
